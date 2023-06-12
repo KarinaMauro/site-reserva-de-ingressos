@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(imagens/filas.jpg);
+  }
+  
+  .site-header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: -20px;
+   
+  }
+  
+  .logo {
+    flex-grow: 1;
+    margin-left: 60px;
+  }
+  
+  .logo img {
+    max-width: 50px;
+    height: auto;
+  }
+  
+  .search-bar form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    font-size: 16px;
+  }
+  
+  .search-bar button {
+    padding: 10px 15px;
+    background-color: red;
+    margin-left: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    margin-left: -400px;
+    border-radius: 15px;
+  }
+  
+  .search-bar button img {
+    width: 20px;
+    height: 20px;
+
+  }
+  
+  .download-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 70px;
+    text-align: center;
+    left: -300px; /* Define a distância desejada para a esquerda */
+     right: auto; /* Redefine a propriedade right para o valor padrão*/
+     position: relative; /* Define a posição relativa para o ajuste */
+  }
+
+  

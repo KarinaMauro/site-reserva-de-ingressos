@@ -1,0 +1,254 @@
+.filme-container {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  margin-left: 65px;
+  
+}
+
+.filme-lista {
+  display: flex;
+  scroll-behavior: smooth;
+  width: max-content;
+}
+
+.filme {
+  flex: 0 0 auto;
+  margin-right: 1px;
+  text-align: center;
+}
+
+.filme img {
+  width: 350px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.filme h3 {
+  margin-top: 10px;
+}
+------------------------------------
+.setas {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.seta-anterior, .seta-proximo {
+  
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color:slategray;
+}
+
+/* Esconder a seta anterior no início */
+#slide-anterior:checked ~ .filme-container .seta-anterior {
+  display: none;
+}
+
+/* Esconder a seta próximo no final */
+#slide-proximo:checked ~ .filme-container .seta-proximo {
+  display: none;
+}
+
+/* Rolar a lista de filmes para a esquerda */
+#slide-anterior:checked ~ .filme-container .filme-lista {
+  scroll-snap-align: start;
+  scroll-snap-type: x mandatory;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+  animation: slide 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+/* Rolar a lista de filmes para a direita */
+#slide-proximo:checked ~ .filme-container .filme-lista {
+  scroll-snap-align: start;
+  scroll-snap-type: x mandatory;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+  animation: slide-reverse 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+/* Animação para deslizar para a esquerda */
+@keyframes slide {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Animação para deslizar para a direita */
+@keyframes slide-reverse {
+  100% {
+    transform: translateX(100%);
+  }
+}
+------------------------------
+.texto {
+  display: flex;
+  justify-content: space-between;
+}
+.texto-esquerda {
+  color:black;
+ top: 20px;
+ height: 400px;
+ margin-top: -370px;
+margin-left: 20%;
+  /* Estilos do texto à esquerda */
+  margin-left: 50px;
+  
+}
+
+.finalizacao{
+  display: flex;
+  justify-content: center;
+  color:black;
+}
+
+.image-box {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.image-box img {
+  width: 200px; /* ajuste o tamanho conforme necessário */
+  height: 200px; /* ajuste o tamanho conforme necessário */
+  margin-right: 10px;
+  display: flex;
+}
+
+.image-box p {
+  margin: 0;
+}
+
+.bordered-text {
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 50px;
+  color:blue;
+  border-left: -200px;
+
+width: 52px;
+ 
+}
+.borderr-img {
+  border: 2px solid white;
+  margin-right: 50px;
+  display: flex;
+   box-sizing: border-box;
+
+}
+.film-poster img {
+  transition: transform 0.3s linear;
+}
+
+.film-poster:hover img {
+  transform: translateX(5px) scale(1.2);
+
+}
+----------------
+.element {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: left 0.3s ease;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  cursor: pointer;
+}
+
+#arrow:checked ~ .element {
+  left: 100px;
+}
+----------------------------------------
+.finaliz-container {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.finaliz-lista {
+  display: flex;
+  scroll-behavior: smooth;
+  width: max-content;
+}
+
+.finaliz {
+  flex: 0 0 auto;
+  margin-right: 18px;
+  text-align: center;
+}
+---------------
+.text-container {
+  width: 300px; /* Ajuste o tamanho conforme necessário */
+  height: 100px; /* Ajuste o tamanho conforme necessário */
+  overflow: hidden;
+}
+
+.scrolling-text {
+  animation: scroll-text 14s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-4%);
+  }
+}
+
+
+
+.finaliz img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+
+.finaliz h3 {
+  margin-top: 10px;
+}
+----------------------
+.copi {
+  display: flex;
+  background-color: black;
+}
+
+.text {
+  flex: 1;
+  color: white;
+  padding: 10px;
+}
+.em-cartaz {
+  margin-left:65px;
+  color:;
+  font-size: 40px;
+}
+  
